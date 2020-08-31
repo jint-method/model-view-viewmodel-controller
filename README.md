@@ -1,6 +1,6 @@
-# Hierarchical model–view–viewmodel
+# model–view–viewmodel-controller
 
-The Hierarchical model–view–viewmodel software architectural pattern attempts to solve the problem of *[how to work with modular programming](https://en.wikipedia.org/wiki/Modular_programming)* for systems that use [JIT](https://en.wikipedia.org/wiki/Just-in-time_compilation) dependency injection. The Hierarchical model–view–viewmodel uses a the [model–view–viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) architecture while borrowing the and [Hierarchical model–view–controller](https://en.wikipedia.org/wiki/Hierarchical_model–view–controller) software architectural pattern's "widgetization" contect structure.
+The model–view–viewmodel-controller software architectural pattern attempts to solve the problem of *[how to work with modular programming](https://en.wikipedia.org/wiki/Modular_programming)* for systems that use [JIT](https://en.wikipedia.org/wiki/Just-in-time_compilation) dependency injection. This pattern uses the [model–view–viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) architecture while borrowing the and [Hierarchical model–view–controller](https://en.wikipedia.org/wiki/Hierarchical_model–view–controller) software architectural pattern's "widgetization" content structure.
 
 ## Table of Contents
 
@@ -18,6 +18,17 @@ This document will describe how to:
 - communication between modules
     - passing information up the hierarchy
     - passing information to an unknown number of children
+    
+## Controller
+
+Unlike [MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) this pattern introduces a controller. The role of a controller is to manage a state that can be passed down to its children.
+
+- controllers are static
+- controllers manage a state
+- controllers can communicate with other controllers (local and external)
+- controllers can have children (viewmodels)
+- controllers are unaware of their children
+- controllers can pass information to their children
 
 ## Creation
 
@@ -40,7 +51,7 @@ This document will describe how to:
 
 ## Communication
 
-- local controllers can directly communication with other controllers
+- local controllers can directly communicate with other controllers
 - local controllers can directly communicate with external controllers
 - local controllers can communicate with their viewmodels via an [Actor Model](https://en.wikipedia.org/wiki/Actor_model) based messaging system
 - local controllers cannot communicate with another controllers viewmodels
