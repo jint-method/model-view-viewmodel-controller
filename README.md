@@ -1,12 +1,13 @@
 # JINT Architecture
 
-The JINT attempts to solve the problem of *[how to work with modular programming](https://en.wikipedia.org/wiki/Modular_programming)* for systems that use [JIT](https://en.wikipedia.org/wiki/Just-in-time_compilation) dependency injection. This architecture pattern uses the [model–view–viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) architecture while borrowing the [Hierarchical model–view–controller](https://en.wikipedia.org/wiki/Hierarchical_model–view–controller) software architectural pattern's "widgetization" content structure.
+The JINT Architecture pattern attempts to solve the problem of *[how to work with modular programming](https://en.wikipedia.org/wiki/Modular_programming)* for systems that use [JIT](https://en.wikipedia.org/wiki/Just-in-time_compilation) dependency injection. This pattern uses [model–view–viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) architecture while borrowing the [Hierarchical model–view–controller](https://en.wikipedia.org/wiki/Hierarchical_model–view–controller) pattern's "widgetization" content structure.
 
 To put it bluntly: JINT Architecture is just MVVM with extra steps.
 
 ## Table of Contents
 
 1. [Overview](#overview)
+1. [Models](#models)
 1. [Creation](#creation)
 1. [Distruction](#distruction)
 1. [Communication](#communication)
@@ -23,7 +24,7 @@ This document will describe how to:
     
 ## Models
 
-The role of a model is to manage a state will be passed down to the viewmodels.
+The role of a model is to manage the state that will be passed down to a viewmodel.
 
 - models are static
 - models manage a state
