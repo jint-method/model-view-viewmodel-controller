@@ -11,8 +11,6 @@ The Hierarchical model–view–viewmodel software architectural pattern attempt
 
 ## Overview
 
-The Hierarchical model–view–viewmodel 
-
 This document will describe how to:
 
 - pass information from modules to their submodules
