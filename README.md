@@ -1,6 +1,8 @@
-# model–view–viewmodel-controller
+# JINT Architecture
 
-The model–view–viewmodel-controller software architectural pattern attempts to solve the problem of *[how to work with modular programming](https://en.wikipedia.org/wiki/Modular_programming)* for systems that use [JIT](https://en.wikipedia.org/wiki/Just-in-time_compilation) dependency injection. This pattern uses the [model–view–viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) architecture while borrowing the and [Hierarchical model–view–controller](https://en.wikipedia.org/wiki/Hierarchical_model–view–controller) software architectural pattern's "widgetization" content structure.
+The JINT attempts to solve the problem of *[how to work with modular programming](https://en.wikipedia.org/wiki/Modular_programming)* for systems that use [JIT](https://en.wikipedia.org/wiki/Just-in-time_compilation) dependency injection. This architecture pattern uses the [model–view–viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) architecture while borrowing the [Hierarchical model–view–controller](https://en.wikipedia.org/wiki/Hierarchical_model–view–controller) software architectural pattern's "widgetization" content structure.
+
+To put it bluntly: JINT Architecture is just MVVM with extra steps.
 
 ## Table of Contents
 
@@ -19,24 +21,24 @@ This document will describe how to:
     - passing information up the hierarchy
     - passing information to an unknown number of children
     
-## Controller
+## Models
 
-Unlike [MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) this pattern has a controller. The role of a controller is to manage a state that can render through the children's views.
+The role of a model is to manage a state will be passed down to the viewmodels.
 
-- controllers are static
-- controllers manage a state
-- controllers can communicate with other controllers (local and external)
-- controllers can have children (viewmodels)
-- controllers are unaware of their children
-- controllers can pass information to their children
+- models are static
+- models manage a state
+- models can communicate with other models (local and external)
+- models can have children (viewmodels)
+- models are unaware of their children
+- models can pass information to their children
 
 ## Creation
 
-1. The controller is instantiated
-1. models are injected into the controller
+1. The models is instantiated
+1. models are injected into the models
 1. viewmodels are instantiated
-    1. inject controller into viewmodel
-    1. models are injected into the viewmodel
+    1. inject viewmodels into viewmodel
+    1. viewmodels are injected into the viewmodel
     1. viewmodels are instantiated
         1. 🔁
     1. viewmodels are bound to their views
@@ -51,9 +53,9 @@ Unlike [MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel
 
 ## Communication
 
-- local controllers can directly communicate with other controllers
-- local controllers can directly communicate with external controllers
-- local controllers can communicate with their viewmodels via an [Actor Model](https://en.wikipedia.org/wiki/Actor_model) based messaging system
-- local controllers cannot communicate with another controllers viewmodels
+- local models can directly communicate with other models
+- local models can directly communicate with external models
+- local models can communicate with their viewmodels via an [Actor Model](https://en.wikipedia.org/wiki/Actor_model) based messaging system
+- local models cannot communicate with another models viewmodels
 - viewmodels cannot communicate with other viewmodels
-- viewmodels can communicate with their parent controller
+- viewmodels can communicate with their parent models
