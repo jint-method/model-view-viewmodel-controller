@@ -6,19 +6,16 @@ The Hierarchical model–view–viewmodel attempts to codify Brad Frost's [Atomi
 
 1. [Overview](#overview)
 1. [Structure](#structure)
-1. [Usage](#usage)
-    1. [Module Lifecycle](#module-lifecycle)
-    1. [Communication](#communication)
-1. [Examples](#examples)
-1. [License](#license)
+1. [Lifecycle](#lifecycle)
+1. [Communication](#communication)
 
 # Overview
 
-The Hierarchical model–view–viewmodel solves problem *how to work with [modular programming](https://en.wikipedia.org/wiki/Modular_programming)?*
+The Hierarchical model–view–viewmodel solves the problem *[how to work with modular programming](https://en.wikipedia.org/wiki/Modular_programming)?*
 
-The Hierarchical model–view–viewmodel describes how to:
+This document will describe how to:
 
-- Pass information form modules to their submodules
+- Pass information from modules to their submodules
 - Pass information from submodule to their parent modules
 - Communication between modules
 
@@ -26,19 +23,26 @@ The Hierarchical model–view–viewmodel describes how to:
 
 The Hierarchical model–view–viewmodel uses a the [model–view–viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) architecture while borrowing the and [Hierarchical model–view–controller](https://en.wikipedia.org/wiki/Hierarchical_model–view–controller) software architectural pattern's "widgetization" contect structure.
 
-![Applicaiton Structure](https://github.com/Pageworks/modular-design-pattern/blob/master/_assets/application-structure-v2.png)
+# Lifecycle
 
-# Usage
+## Creation
 
-### Module Lifecycle
+1. The controller is instantiated
+1. models are injected into the controller
+1. viewmodels are instantiated
+    1. models are injected into the viewmodel
+    1. viewmodels are instantiated
+        1. repeat 🔁
+    1. viewmodels are bound to their views
+1. viewmodels are bound to their views
 
-![Module Lifecycle](https://github.com/Pageworks/modular-design-pattern/blob/master/_assets/base-module-lifecycle.png)
+## Distruction
 
-### Communication
+1. viewmodel is destoryed
+    1. collect child viewmodels
+    1. destory viewmodels
+        1. repeat 🔁
+
+# Communication
 
 Local controllers can directly communication with other controllers or external controllers. Only parent controllers are allowed to communication with it their viewmodels.
-
-# Examples
-
-[JavaScript](https://github.com/codewithkyle/modular-design-pattern-javascript-example)
-
