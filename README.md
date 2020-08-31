@@ -1,8 +1,8 @@
-# JINT Architecture
+# model-view-viewmodel-controller
 
-The JINT Architecture pattern attempts to solve the problem of *[how to work with modular programming](https://en.wikipedia.org/wiki/Modular_programming)* for systems that use [JIT](https://en.wikipedia.org/wiki/Just-in-time_compilation) dependency injection. This pattern uses [model–view–viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) architecture while borrowing the [Hierarchical model–view–controller](https://en.wikipedia.org/wiki/Hierarchical_model–view–controller) pattern's "widgetization" content structure.
+This architecture pattern attempts to solve the problem of *[how to work with modular programming](https://en.wikipedia.org/wiki/Modular_programming)* for systems that use [JIT](https://en.wikipedia.org/wiki/Just-in-time_compilation) dependency injection. This pattern uses [model–view–viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) architecture while borrowing the [Hierarchical model–view–controller](https://en.wikipedia.org/wiki/Hierarchical_model–view–controller) pattern's "widgetization" content structure.
 
-To put it bluntly: JINT Architecture is just MVVM with extra steps.
+To put it bluntly: it's just MVVM with extra steps.
 
 ## Table of Contents
 
@@ -24,14 +24,21 @@ This document will describe how to:
     
 ## Models
 
-The role of a model is to manage the state that will be passed down to a viewmodel.
+The role of a model is to manage a state.
 
-- models are static
 - models manage a state
-- models can communicate with other models (local and external)
-- models can have children (viewmodels)
-- models are unaware of their children
-- models can pass information to their children
+- models can only communicate **locally** with the injected controller
+- models can communicate with external controllers
+
+## Controllers
+
+- controllers are static
+- controllers can communicate with other controllers (local and external)
+- controllers can have children (viewmodels)
+- controllers are unaware of their children
+- controllers can pass information to their children
+- controllers instantiate models
+- controllers can communicate with their models
 
 ## Creation
 
