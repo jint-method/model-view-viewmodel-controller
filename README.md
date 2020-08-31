@@ -21,8 +21,8 @@ This document will describe how to:
 - pass information from modules to their submodules
 - pass information from submodule to their parent modules
 - communication between modules
-    - passing information up the hierarchy
-    - passing information to an unknown number of children
+- passing information up the hierarchy
+- passing information to an unknown number of submodules
     
 ## Models
 
