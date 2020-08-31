@@ -40,7 +40,7 @@ The role of a model is to manage a state will be passed down to the viewmodels.
     1. inject viewmodels into viewmodel
     1. viewmodels are injected into the viewmodel
     1. viewmodels are instantiated
-        1. 🔁
+        1. 🔁 until all viewmodels have been injected
     1. viewmodels are bound to their views
 1. viewmodels are bound to their views
 
@@ -49,7 +49,7 @@ The role of a model is to manage a state will be passed down to the viewmodels.
 1. viewmodel is destoryed
     1. collect child viewmodels
     1. destory viewmodels
-        1. 🔁
+        1. 🔁 until all children have been destoryed
 
 ## Communication
 
