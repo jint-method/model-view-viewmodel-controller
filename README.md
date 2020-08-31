@@ -21,7 +21,7 @@ This document will describe how to:
     
 ## Controller
 
-Unlike [MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) this pattern introduces a controller. The role of a controller is to manage a state that can be passed down to its children.
+Unlike [MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) this pattern has a controller. The role of a controller is to manage a state that can render through the children's views.
 
 - controllers are static
 - controllers manage a state
