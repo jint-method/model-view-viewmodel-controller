@@ -15,9 +15,11 @@ The Hierarchical model–view–viewmodel solves the problem *[how to work with 
 
 This document will describe how to:
 
-- Pass information from modules to their submodules
-- Pass information from submodule to their parent modules
-- Communication between modules
+- pass information from modules to their submodules
+- pass information from submodule to their parent modules
+- communication between modules
+    - passing information up the hierarchy
+    - passing information to an unknown number of children
 
 # Structure
 
@@ -30,9 +32,10 @@ The Hierarchical model–view–viewmodel uses a the [model–view–viewmodel](
 1. The controller is instantiated
 1. models are injected into the controller
 1. viewmodels are instantiated
+    1. inject controller into viewmodel
     1. models are injected into the viewmodel
     1. viewmodels are instantiated
-        1. repeat 🔁
+        1. 🔁
     1. viewmodels are bound to their views
 1. viewmodels are bound to their views
 
@@ -41,8 +44,13 @@ The Hierarchical model–view–viewmodel uses a the [model–view–viewmodel](
 1. viewmodel is destoryed
     1. collect child viewmodels
     1. destory viewmodels
-        1. repeat 🔁
+        1. 🔁
 
 # Communication
 
-Local controllers can directly communication with other controllers or external controllers. Only parent controllers are allowed to communication with it their viewmodels.
+- local controllers can directly communication with other controllers
+- local controllers can directly communicate with external controllers
+- local controllers can communicate with their viewmodels via an [Actor Model](https://en.wikipedia.org/wiki/Actor_model) based messaging system
+- local controllers cannot communicate with another controllers viewmodels
+- viewmodels cannot communicate with other viewmodels
+- viewmodels can communicate with their parent controller
