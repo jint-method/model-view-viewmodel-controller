@@ -2,7 +2,7 @@
 
 The Hierarchical model–view–viewmodel software architectural pattern attempts to refine the [model–view–viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) architecture pattern for systems that use [JIT](https://en.wikipedia.org/wiki/Just-in-time_compilation) dependency injection.
 
-# Table of Contents
+## Table of Contents
 
 1. [Overview](#overview)
 1. [Structure](#structure)
@@ -10,7 +10,7 @@ The Hierarchical model–view–viewmodel software architectural pattern attempt
 1. [Distruction](#distruction)
 1. [Communication](#communication)
 
-# Overview
+## Overview
 
 The Hierarchical model–view–viewmodel solves the problem *[how to work with modular programming](https://en.wikipedia.org/wiki/Modular_programming)?*
 
@@ -22,11 +22,11 @@ This document will describe how to:
     - passing information up the hierarchy
     - passing information to an unknown number of children
 
-# Structure
+## Structure
 
 The Hierarchical model–view–viewmodel uses a the [model–view–viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) architecture while borrowing the and [Hierarchical model–view–controller](https://en.wikipedia.org/wiki/Hierarchical_model–view–controller) software architectural pattern's "widgetization" contect structure.
 
-# Creation
+## Creation
 
 1. The controller is instantiated
 1. models are injected into the controller
@@ -38,14 +38,14 @@ The Hierarchical model–view–viewmodel uses a the [model–view–viewmodel](
     1. viewmodels are bound to their views
 1. viewmodels are bound to their views
 
-# Distruction
+## Distruction
 
 1. viewmodel is destoryed
     1. collect child viewmodels
     1. destory viewmodels
         1. 🔁
 
-# Communication
+## Communication
 
 - local controllers can directly communication with other controllers
 - local controllers can directly communicate with external controllers
