@@ -6,7 +6,8 @@ The Hierarchical model–view–viewmodel software architectural pattern attempt
 
 1. [Overview](#overview)
 1. [Structure](#structure)
-1. [Lifecycle](#lifecycle)
+1. [Creation](#creation)
+1. [Distruction](#distruction)
 1. [Communication](#communication)
 
 # Overview
@@ -25,9 +26,7 @@ This document will describe how to:
 
 The Hierarchical model–view–viewmodel uses a the [model–view–viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) architecture while borrowing the and [Hierarchical model–view–controller](https://en.wikipedia.org/wiki/Hierarchical_model–view–controller) software architectural pattern's "widgetization" contect structure.
 
-# Lifecycle
-
-## Creation
+# Creation
 
 1. The controller is instantiated
 1. models are injected into the controller
@@ -39,7 +38,7 @@ The Hierarchical model–view–viewmodel uses a the [model–view–viewmodel](
     1. viewmodels are bound to their views
 1. viewmodels are bound to their views
 
-## Distruction
+# Distruction
 
 1. viewmodel is destoryed
     1. collect child viewmodels
