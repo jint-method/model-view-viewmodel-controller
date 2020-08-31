@@ -11,8 +11,9 @@ To put it bluntly: it's just MVVM with extra steps.
 1. [Controlers](#controllers)
 1. [Viewmodels](#viewmodels)
 1. [Creation](#creation)
+    1. [With Controller](#creation-via-controller)
+    1. [Without Controller](#creation-sans-controller)
 1. [Distruction](#distruction)
-1. [Communication](#communication)
 
 ## Overview
 
@@ -54,28 +55,27 @@ The role of a viewmodel is to handle input from the user or a controller and upd
 
 ## Creation
 
-1. The models is instantiated
-1. models are injected into the models
+### Creation Via Controller
+
+1. controller is instantiated
+1. controller instantiates model(s)
+1. viewmodels are injected
 1. viewmodels are instantiated
-    1. inject viewmodels into viewmodel
-    1. viewmodels are injected into the viewmodel
-    1. viewmodels are instantiated
-        1. 🔁 until all viewmodels have been injected
-    1. viewmodels are bound to their views
-1. viewmodels are bound to their views
+    1. dependencies injected into the viewmodels
+    
+### Creation Sans Controller
+
+1. viewmodel is instantiated
+1. dependencies injected
 
 ## Distruction
 
+### Viewmodels
+
 1. viewmodel is destoryed
     1. collect child viewmodels
-    1. destory viewmodels
-        1. 🔁 until all children have been destoryed
+    1. destory children
+    
+### Models
 
-## Communication
-
-- local models can directly communicate with other models
-- local models can directly communicate with external models
-- local models can communicate with their viewmodels via an [Actor Model](https://en.wikipedia.org/wiki/Actor_model) based messaging system
-- local models cannot communicate with another models viewmodels
-- viewmodels cannot communicate with other viewmodels
-- viewmodels can communicate with their parent models
+1. controller destroys the model
