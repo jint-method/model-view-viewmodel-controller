@@ -1,6 +1,6 @@
 # Hierarchical model–view–viewmodel
 
-The Hierarchical model–view–viewmodel attempts to codify Brad Frost's [Atomic Design methodology](http://bradfrost.com/blog/post/atomic-web-design/) using the [MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) architectural pattern.
+The Hierarchical model–view–viewmodel software architectural pattern attempts to refine the [model–view–viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) architecture pattern for systems that use [JIT](https://en.wikipedia.org/wiki/Just-in-time_compilation) dependency injection.
 
 # Table of Contents
 
