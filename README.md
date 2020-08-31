@@ -8,6 +8,8 @@ To put it bluntly: it's just MVVM with extra steps.
 
 1. [Overview](#overview)
 1. [Models](#models)
+1. [Controlers](#controllers)
+1. [Viewmodels](#viewmodels)
 1. [Creation](#creation)
 1. [Distruction](#distruction)
 1. [Communication](#communication)
@@ -32,6 +34,8 @@ The role of a model is to manage a state.
 
 ## Controllers
 
+The role of a controller is to handle input from a viewmodel or another controller and pass the input to a model.
+
 - controllers are static
 - controllers can communicate with other controllers (local and external)
 - controllers can have children (viewmodels)
@@ -39,6 +43,14 @@ The role of a model is to manage a state.
 - controllers can pass information to their children
 - controllers instantiate models
 - controllers can communicate with their models
+
+## Viewmodels
+
+The role of a viewmodel is to handle input from the user or a controller and update its view.
+
+- viewmodels can communicate with an injected controller
+- viewmodels can manage its local state
+- viewmodels are bound to a view
 
 ## Creation
 
