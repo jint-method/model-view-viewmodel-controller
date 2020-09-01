@@ -11,7 +11,6 @@ The *model-view-viewmodel-controller* software architecture pattern answers the 
 1. [Controlers](#controllers)
 1. [Viewmodels](#viewmodels)
 1. [Views](#views)
-1. [Distruction](#distruction)
 1. [Structures](#structures)
 
 ## Overview
