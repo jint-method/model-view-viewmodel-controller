@@ -15,6 +15,7 @@ The model-view-viewmodel-controller software architecture pattern solves the pro
     1. [With Controller](#creation-via-controller)
     1. [Without Controller](#creation-sans-controller)
 1. [Distruction](#distruction)
+1. [Structures](#structures)
 
 ## Overview
 
@@ -25,22 +26,6 @@ This document will describe how to:
 - communication between modules
 - passing information up the hierarchy
 - passing information to an unknown number of submodules
-
-### Basic Structure
-
-![A basic model-view-viewmodel-controller structure](/images/basic-structure.png)
-
-### Expanded Structure
-
-![An expanded model-view-viewmodel-controller structure](/images/expanded-structure.png)
-    
-## Models
-
-The role of a model is to manage a state.
-
-- models manage a state
-- models can only communicate **locally** with the injected controller
-- models can communicate with external controllers
 
 ## Controllers
 
@@ -53,6 +38,14 @@ The role of a controller is to handle input from a viewmodel or another controll
 - controllers can pass information to their children
 - controllers instantiate models
 - controllers can communicate with their models
+    
+## Models
+
+The role of a model is to manage a state.
+
+- models manage a state
+- models can only communicate **locally** with the injected controller
+- models can communicate with external controllers
 
 ## Viewmodels
 
@@ -96,3 +89,13 @@ The view is the structure, layout, and appearance of what a user sees on the scr
 ### Models
 
 1. controller destroys the model
+
+## Structures
+
+### Basic Structure
+
+![A basic model-view-viewmodel-controller structure](/images/basic-structure.png)
+
+### Expanded Structure
+
+![An expanded model-view-viewmodel-controller structure](/images/expanded-structure.png)
