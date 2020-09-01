@@ -1,8 +1,8 @@
 # model-view-viewmodel-controller
 
-The model-view-viewmodel-controller software architecture pattern solves the problem of *[how to work with modular programming](https://en.wikipedia.org/wiki/Modular_programming)* in systems that use [JIT](https://en.wikipedia.org/wiki/Just-in-time_compilation) dependency injection. This pattern is based upon [model–view–viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) architecture while borrowing some concepts from the [Hierarchical model–view–controller](https://en.wikipedia.org/wiki/Hierarchical_model–view–controller) architecture pattern.
+The model-view-viewmodel-controller software architecture pattern solves the problem of *[how to work with modular programming](https://en.wikipedia.org/wiki/Modular_programming)* in systems that use [JIT](https://en.wikipedia.org/wiki/Just-in-time_compilation) dependency injection. This pattern is based upon [model–view–viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) architecture while borrowing some concepts from [Hierarchical model–view–controller](https://en.wikipedia.org/wiki/Hierarchical_model–view–controller).
 
-To put it bluntly: it's just MVVM with extra steps.
+![It's just MVVM with extra steps](/images/to-put-it-bluntly.jpg)
 
 ## Table of Contents
 
