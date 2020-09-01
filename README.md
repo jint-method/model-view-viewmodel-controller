@@ -10,6 +10,7 @@ The model-view-viewmodel-controller software architecture pattern solves the pro
 1. [Models](#models)
 1. [Controlers](#controllers)
 1. [Viewmodels](#viewmodels)
+1. [View](#view)
 1. [Creation](#creation)
     1. [With Controller](#creation-via-controller)
     1. [Without Controller](#creation-sans-controller)
@@ -24,6 +25,10 @@ This document will describe how to:
 - communication between modules
 - passing information up the hierarchy
 - passing information to an unknown number of submodules
+
+### Basic Structure
+
+![A basic model-view-viewmodel-controller structure](/images/basic-structure.png)
     
 ## Models
 
@@ -52,6 +57,14 @@ The role of a viewmodel is to handle input from the user or a controller and upd
 - viewmodels can communicate with an injected controller
 - viewmodels can manage its local state
 - viewmodels are bound to a view
+
+## View
+
+The view is the structure, layout, and appearance of what a user sees on the screen.
+
+- recieves input from the user
+- sends input to the viewmodel
+- displays the viewmodels state via data binding
 
 ## Creation
 
