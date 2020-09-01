@@ -9,7 +9,7 @@ The *model-view-viewmodel-controller* software architecture pattern answers the 
 1. [Overview](#overview)
 1. [Models](#models)
 1. [Controlers](#controllers)
-1. [Viewmodels](#viewmodels)
+1. [View Models](#view-models)
 1. [Views](#views)
 1. [Structures](#structures)
 
@@ -42,16 +42,17 @@ The role of a controller is to handle input from a view model or another control
 The role of a model is to manage a state.
 
 - models manage a state
-- models can only communicate **locally** with their controller
+- models can communicate with their local controller
 - models can communicate with external controllers
 
-## Viewmodels
+## View Models
 
 The role of a view model is to handle input from the view or a controller.
 
-- view models can communicate with controllers
+- view models can communicate with local controllers
 - view models can manage a local state
 - view models are bound to a view
+- view models can be self instantiated
 
 ## Views
 
@@ -65,8 +66,12 @@ The view is the structure, layout, and appearance of what a user sees on the scr
 
 ### Basic Structure
 
+The basic structure diagram showcases the hierarchy and flow of communication between a controller, its model, its view models, and their views. Note that view models do not require a parent controller and can be self instantiated.
+
 ![A basic model-view-viewmodel-controller structure](/images/basic-structure.png)
 
 ### Expanded Structure
+
+The expanded structure diagram showcases the hierarchy and flow of communication between two controllers, where one controller has children. Note that view models can have child view models and that data only flows from the parent view model to the child view model. Any communication up the hierarchy is passed directly to the parent controller.
 
 ![An expanded model-view-viewmodel-controller structure](/images/expanded-structure.png)
