@@ -2,8 +2,6 @@
 
 The *model-view-viewmodel-controller* software architecture pattern answers the question *[how to work with modular programming](https://en.wikipedia.org/wiki/Modular_programming)* in systems that use [JIT](https://en.wikipedia.org/wiki/Just-in-time_compilation) dependency injection. This pattern is based upon [model–view–viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) architecture while borrowing the "widgetization" concept from [Hierarchical model–view–controller](https://en.wikipedia.org/wiki/Hierarchical_model–view–controller).
 
-![It's just MVVM with extra steps](/images/to-put-it-bluntly.jpg)
-
 ## Table of Contents
 
 1. [Overview](#overview)
