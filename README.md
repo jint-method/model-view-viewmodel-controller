@@ -27,7 +27,7 @@ This document will describe:
 The role of a controller is to handle input from a view model or another controller. Controllers will manipulate and verify the data before passing it to a model.
 
 - controllers are static
-- controllers can communicate with other controllers (local and external)
+- controllers can communicate with other controllers
 - controllers instantiate models
 - controllers can communicate with their models
 - controllers can have children (view models)
@@ -40,17 +40,20 @@ The role of a controller is to handle input from a view model or another control
 The role of a model is to manage a state.
 
 - models manage a state
-- models can communicate with their local controller
+- models can communicate with local controllers
 - models can communicate with external controllers
 
 ## View Models
 
 The role of a view model is to handle input from the view or a controller.
 
-- view models can communicate with local controllers
+- view models can communicate with controllers
 - view models can manage a local state
 - view models are bound to a view
 - view models can be self instantiated
+- view models can have children
+- view models can directly communicate with child view models
+- view models can indirectly communicate with other view models
 
 ## Views
 
