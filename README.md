@@ -6,7 +6,7 @@ The *model-view-viewmodel-controller* software architecture pattern answers the 
 
 1. [Overview](#overview)
 1. [Models](#models)
-1. [Controlers](#controllers)
+1. [Controllers](#controllers)
 1. [View Models](#view-models)
 1. [Views](#views)
 1. [Structures](#structures)
